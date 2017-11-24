@@ -220,6 +220,7 @@ module.exports = (options = {}) => {
   const destroy = (options) => ((key) => destroyItem(options, key));
 
   return {
+    options: (() => options),
     all:    all(options),
     find:   find(options),
     create: create(options),
